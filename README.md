@@ -24,3 +24,8 @@ Management -> SNO Node - OCP 4.14
 192.168.0.201 -- VLAN 505
 ```
 
+ILO -> Switch - HP ProCurve
+
+```
+192.168.0.152
+```
