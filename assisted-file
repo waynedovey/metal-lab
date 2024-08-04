@@ -21,6 +21,7 @@ interfaces:
       - eno2
 - name: bond0.505
   type: vlan
+  mtu: 1500
   state: up
   vlan:
     base-iface: bond0
