@@ -1,0 +1,42 @@
+---
+dns-resolver:
+  config:
+    server:
+    - 192.168.1.200
+interfaces:
+- ipv4:
+    dhcp: false
+    enabled: false    
+  name: bond0
+  state: up
+  type: bond
+  link-aggregation:
+    mode: 802.3ad
+    options:
+      lacp_rate: slow
+      miimon: 110
+    port:
+      - eno1
+      - eno2
+- name: bond0.505
+  type: vlan
+  state: up
+  vlan:
+    base-iface: bond0
+    id: 505
+  ipv4:
+    address:
+      - ip: 192.168.1.100
+        prefix-length: 24
+    dhcp: false
+    enabled: true
+  ipv6:
+    enabled: true
+    dhcp: false         
+routes:
+  config:
+  - destination: 0.0.0.0/0
+    next-hop-address: 192.168.1.200
+    next-hop-interface: eno1.505
+    table-id: 254
+---
