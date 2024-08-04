@@ -79,7 +79,7 @@ spec:
       "ipam": {}
     }
 
-
+---
 apiVersion: k8s.cni.cncf.io/v1
 kind: NetworkAttachmentDefinition
 metadata:
