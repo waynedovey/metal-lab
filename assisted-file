@@ -10,6 +10,7 @@ interfaces:
   name: bond0
   state: up
   type: bond
+  mtu: 1500
   link-aggregation:
     mode: 802.3ad
     options:
