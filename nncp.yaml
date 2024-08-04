@@ -13,8 +13,8 @@ spec:
       link-aggregation:
         mode: 802.3ad
         port:
-          - eno1
           - eno2
+          - eno3
       ipv4:
         enabled: false
     - name: ovs-br1 
